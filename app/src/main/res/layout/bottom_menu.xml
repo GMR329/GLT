@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainColor">
+
+    <ImageView
+        android:id="@+id/bottomMainSub"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:onClick="bMainMenuClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/BotMenu" />
+
+    <ImageView
+        android:id="@+id/subList"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/subNotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomMainSub"
+        app:srcCompat="@color/NotHighlighted"
+        android:onClick="subListClick"/>
+
+    <TextView
+        android:id="@+id/subTextList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="List:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/subList"
+        app:layout_constraintEnd_toEndOf="@+id/subList"
+        app:layout_constraintStart_toStartOf="@+id/subList"
+        app:layout_constraintTop_toTopOf="@+id/subList" />
+
+    <ImageView
+        android:id="@+id/subNotes"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/subMisc"
+        app:layout_constraintStart_toEndOf="@+id/subList"
+        app:layout_constraintTop_toBottomOf="@+id/bottomMainSub"
+        app:srcCompat="@color/MainColor"
+        android:onClick="subNotesClick"/>
+
+    <TextView
+        android:id="@+id/subTextNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Notes:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/subNotes"
+        app:layout_constraintEnd_toEndOf="@+id/subNotes"
+        app:layout_constraintStart_toStartOf="@+id/subNotes"
+        app:layout_constraintTop_toTopOf="@+id/subNotes" />
+
+    <ImageView
+        android:id="@+id/subMisc"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subNotes"
+        app:layout_constraintTop_toBottomOf="@+id/bottomMainSub"
+        app:srcCompat="@color/NotHighlighted"
+        android:onClick="subMiscClick"/>
+
+    <TextView
+        android:id="@+id/subTextMisc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Misc:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/subMisc"
+        app:layout_constraintEnd_toEndOf="@+id/subMisc"
+        app:layout_constraintStart_toStartOf="@+id/subMisc"
+        app:layout_constraintTop_toTopOf="@+id/subMisc" />
+
+    <EditText
+        android:id="@+id/listArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ems="10"
+        android:gravity="top"
+        android:cursorVisible="true"
+        android:hint="List: "
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/notesArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subNotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ems="10"
+        android:gravity="top"
+        android:cursorVisible="true"
+        android:hint="Notes: "
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:visibility="visible"/>
+
+    <EditText
+        android:id="@+id/miscArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subMisc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ems="10"
+        android:gravity="top"
+        android:cursorVisible="true"
+        android:hint="Misc: "
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
